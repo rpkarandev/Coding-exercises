@@ -45,19 +45,19 @@ else
 end
     xlim([minmax(1) minmax(2)])
     ylim([minmax(3) minmax(4)])      
-     h = handle(gcf); 
-    h.name='Lattice Model';
-    h.color = [0.7 0.7 0.7];
+    h = handle(gcf); 
+    h.Name='Lattice Model';
+    h.Color = [0.7 0.7 0.7];
     %%set(f1,'ButtonDownFcn', @OnPlotClick_CB) %%Pause and resume On mouse click.
     %%set(get(h,'Children'),'ButtonDownFcn', @OnPlotClick_CB) %%Pause and resume On mouse click.
-    g=handle(gca);
-    g.color = [0.95 0.95 0.95];
+    g = handle(gca);
+    g.Color = [0.95 0.95 0.95];
     g.XTick = [0:1:100];
     g.YTick = [0:1:100];
     g.XTickLabel = [];
     g.YTickLabel = [];
-    g.Xcolor = [.8 .85 .8];
-    g.Ycolor = [0.8 0.8 0.85];    
+    g.XColor = [.8 .85 .8];
+    g.YColor = [0.8 0.8 0.85];    
     g.LineWidth = 5;
     g.GridLineStyle = '-';   
     grid on
