@@ -1,0 +1,41 @@
+Last Update: 12th Mar 2015 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#Main File "md.cpp" 
+	#Added following Functions:
+		* void msdsample(int delt, int stime ,int etime) 
+			-> computes msd using coordinates from config.xyz file
+			-> delt is the time interval parameter
+			-> stime - starting time to analyze in trajectory
+			-> etime - end time to analyze in trajectory
+			-> Writes output to file in space delimited table format without header: dt <msd> ln(dt) ln(<msd> dt sqrt(<msd>
+		* void copycoordinates(Cordinates *a,Cordinates *b, int size = N) 
+			-> copies coordinates from "a" to "b", first 1 -"size" points
+			-> cordinates a and b are address of coordinate class variable (&r[0]) to copy from and to
+			-> size - specifies no of coordinates to copy, default N
+		* int nint(double d)  
+			-> Replacement for "nint", incase not available in lib
+		* void writecoord(Cordinates *input, char *fname) 
+			-> writes/appends- coordinates to file
+			-> input - address of coordinate class variable to write
+			-> fname - file name 
+		* void absconfig(char* outputfilename,int delt = 10,int stime = 1,int etime = 5000) 
+			-> Function to convert config.xyz file to absolute configuration "absconfig.xyz" file
+			-> outputfilename - name of the file "absconfig.xyz"
+			-> delt is the time interval parameter
+			-> stime - starting time to analyze in trajectory
+			-> etime - end time to analyze in trajectory 
+		* std::ifstream& readconf(std::ifstream& file,bool abs ,unsigned int time, Cordinates *r) 
+			-> Function to read coordinates for a time t from config.xyz file
+			-> file - ifstream file variable/pointer of the config.xyz file to read from
+			-> abs - boolean True/False. True for absolute time in Trajectory and False for relative to last accessed/read time in Trajectory.
+			-> r - address of output coordinate class variable (&r[0])
+			
+#Library File "para.h"
+	#Added declarations for above 5 functions in header file.
+		void copycoordinates(Cordinates *a,Cordinates *b, int size = N);
+		int nint(double d);
+		void writecoord(Cordinates *input, char *fname);					
+		void msdsample(int delt, int stime ,int etime);
+		void absconfig(char* outputfilename,int delt = 10,int stime = 1,int etime = 5000);
+		std::ifstream& readconf(std::ifstream& file,bool abs ,unsigned int time, Cordinates *r);
+		

@@ -1,13 +1,14 @@
-## 2D lattice chain model to understand protein folding -
-+ Learning exercise to understand protein folding
-+ Old code
+## Coding exercises
+
++ Old codes
 + todo: translate to python (someday)
 
-## List of folders
-### Matlab
-### ...
+## List of projects/folders
+### 2D-lattice chain model to understand protein folding (matlab)
+### MSD calculation (C )
 
-## list of files in Matlab folder 
+## list of files in lattice_chain_model 
+
 #### matlab scripts
 + main.m - main script; call the function to start; Four choices are provided; Executes Lattice_Chain_Folding.m
 + CalInteract.m - calculate interactions and score the conformations
