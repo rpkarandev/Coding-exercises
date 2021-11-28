@@ -3,11 +3,7 @@
 + Old code
 + todo: translate to python (someday)
 
-## List of folders
-### Matlab
-### ...
-
-## list of files in Matlab folder 
+### list of files
 #### matlab scripts
 + main.m - main script; call the function to start; Four choices are provided; Executes Lattice_Chain_Folding.m
 + CalInteract.m - calculate interactions and score the conformations
